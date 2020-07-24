@@ -18,11 +18,6 @@ public class ProjectController {
         this.projectService = projectService;
     }
 
-    @RequestMapping("/project")
-    public String getProject(){
-        return "redirect:/index";
-    }
-
     @RequestMapping("/project/{id}")
     public String getProjectById(@PathVariable Integer id, Model model){
 
