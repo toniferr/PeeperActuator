@@ -1,10 +1,10 @@
-package com.toni.thymeleaf;
+package com.toni.actuator;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PeeperThymeleafApplicationTests {
+class PeeperActuatorApplicationTests {
 
 	@Test
 	void contextLoads() {
