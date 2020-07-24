@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+    <div th:fragment="projectdiv">
+   		<div class="course-listing">
+	        <div class="row">
+	            <a th:href="@{'/project/'+${project.id}}">
+	                <div class="col-lg-12">
+	                    <div class="course-box-image-container">
+	                        <img role="presentation"
+	                        	alt="image-project"
+	                             src="../static/images/SpringIntroThumb.png"
+	                             th:src="@{'/images/'+${project.imageUrl}}"
+	                             class="course-box-image"/>
+	                    </div>
+	                    <div class="course-listing-title" th:text="${project.name}">
+	                        Project Title
+	                    </div>
+	                    <div class="course-listing-subtitle" th:text="${project.subtitle}">
+	                        Project subtitle
+	                    </div>
+	                </div>
+	            </a>
+	        </div>
+	        <div class="row course-listing-extra-info col-xl-12">
+	            <div class="col-xl-8">
+	            	<div class="col-xl-12"> 	
+		                <img alt="Toni Ferreiro"
+		                     th:src="@{'/images/'+${project.developer.image}}"
+		                     class="img-circle"/>
+		                <div class="small course-author-name" th:text="${(project.developer.firstName)
+		                                                          + ' ' + (project.developer.lastName)}">
+		                    Toni Ferreiro
+		                </div>
+	                </div>
+	            </div>
+	            <div class="col-xl-4">
+		            <div class="small course-price" th:text="${project.license}">
+	                <!-- <div class="small course-price" th:text="${project.price > 0 ? '$' + project.price : 'FREE'}"> -->
+	                    License
+	                </div>
+	            </div>
+	        </div>
+         </div>
+     </div>
+</body>
+</html>

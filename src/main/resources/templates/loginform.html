@@ -1,0 +1,66 @@
+  
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Login</title>
+    
+    <link th:href="@{/css/bootstrap/bootstrap.min.css}" rel="stylesheet" media="screen"/>
+
+    <script th:src="@{/js/jquery/jquery-3.5.1.min.js}"></script>
+
+    <link th:href="@{/css/custom.css}" rel="stylesheet" media="screen"/>
+
+</head>
+<body>
+	<div th:insert="~{fragments/jumbotron :: jumbotron}"></div>
+	<div class="container">
+	    <div class="row">
+	        <div class="col-md-5 col-md-offset-4">
+	            <h2>Login</h2>
+	            <div>
+	                <form class="form-horizontal" th:object="${loginCommand}" th:action="@{/login}" method="post">
+	
+	                    <div th:if="${param.error}" class="alert alert-danger">
+	                        <p>Invalid username and password.</p>
+	                    </div>
+	
+	                    <div th:if="${param.logout}" class="alert alert-success">
+	                        <p>You've been logged out.</p>
+	                    </div>
+	
+	                    <div class="form-group"
+	                         th:class="${#fields.hasErrors('username')} ? 'form-group text-danger' : 'form-group'">
+	                        <label class="col-sm-2 control-label">Username:</label>
+	                        <div class="col-sm-10">
+	                            <input type="text" class="form-control" name="username" id="username" th:errorclass="is-invalid"/>
+	                            <span class="help-block" th:if="${#fields.hasErrors('username')}">
+	                                <ul>
+	                                    <li th:each="err : ${#fields.errors('username')}" th:text="${err}"/>
+	                                </ul>
+	                            </span>
+	                        </div>
+	                    </div>
+	
+	                    <div class="form-group"
+	                         th:class="${#fields.hasErrors('password')} ? 'form-group text-danger' : 'form-group'">
+	                        <label class="col-sm-2 control-label">Password:</label>
+	                        <div class="col-sm-10">
+	                            <input type="password" class="form-control" name="password" id="password" th:errorclass="is-invalid"/>
+	                            <span class="help-block" th:if="${#fields.hasErrors('password')}">
+	                                <ul>
+	                                    <li th:each="err : ${#fields.errors('password')}" th:text="${err}"/>
+	                                </ul>
+	                            </span>
+	                        </div>
+	                    </div>
+	
+	                    <button type="submit" class="btn btn-secondary">Submit</button>
+	                </form>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<div th:insert="~{fragments/footer :: footer}"></div>
+</body>
+</html>
