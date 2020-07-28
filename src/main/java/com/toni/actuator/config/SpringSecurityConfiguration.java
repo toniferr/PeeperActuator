@@ -36,6 +36,7 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter{
 	        http.authorizeRequests().antMatchers("/", "/index", "/project/**", "/checkout", "/docheckout").permitAll()
 	                .and().authorizeRequests().antMatchers("/login","logout").permitAll()
 	                .and().authorizeRequests().antMatchers("/css/**","/js/**", "/images/**", "/favicon.ico").permitAll()
+	                .and().authorizeRequests().antMatchers("/h2/**").permitAll()
 	                .and().formLogin().loginPage("/login").defaultSuccessUrl("/").permitAll()
 	                .and().logout()
 	                        .deleteCookies("remove")
@@ -44,5 +45,7 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter{
 	                        .logoutSuccessUrl("/logout-success")
 	                        .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
 	               ;
+	        http.csrf().disable();
+	        http.headers().frameOptions().disable();
 	    }
 	}
