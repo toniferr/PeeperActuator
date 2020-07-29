@@ -8,6 +8,8 @@ public interface ProjectService {
 
 	Project getProject(Integer id);
 
-    List<Project> listProjects();
+    List<Project> listProjects();    
+
+    void sendMessage(String id);
 
 }

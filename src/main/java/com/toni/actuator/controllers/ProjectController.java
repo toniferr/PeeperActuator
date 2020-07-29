@@ -25,4 +25,10 @@ public class ProjectController {
 
         return "project";
     }
+    
+    @RequestMapping("/project/sendMessage/{id}")
+    public String indexProject(@PathVariable String id){
+    	projectService.sendMessage(id);
+        return "redirect:/project/"+id;
+    }
 }

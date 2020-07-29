@@ -64,6 +64,26 @@
 	                    <li th:remove="all"><a href="#">Cat 3</a></li>
 	                </ol>
 	            </div>
+	            
+	            <div class="row col-xl-12">
+                    <label class="col-sm-4 sm-2 control-label">Are Messages Sent:</label>
+                    <div class="col-sm-8">
+                        <p class="form-control-static" th:text="${project.messageReceived}">Are Messages Sent</p>
+                    </div>
+                </div>
+
+                <div class="row col-xl-12">
+                    <label class="col-sm-4 sm-2 control-label">Message Count:</label>
+                    <div class="col-sm-8">
+                        <p class="form-control-static" th:text="${project.messageCount}">5</p>
+                    </div>
+                </div>
+				 <div class="row col-xl-12">	
+				    <div class="col-sm-8">
+				           <a th:href="@{/project/sendMessage/{projectId}/(projectId = ${project.id})}">
+				               Send message for project through queue listener</a>
+				       </div>
+				</div>
 	
 	        </div>
 	        <div class="col-md-6">
@@ -80,18 +100,18 @@
 	                     ullamcorper etiam consectetur. </p>
 	             </div>
 	        </div>
-	    </div>
-	
-	    <div class="button-p row">
-	        <div class="col-md-offset-6 col-md-4">
-	            <button class="btn-success" th:text="#{button.star}">Star</button>
-	        </div>
-	    </div>
+	    </div>	    
+		
+<!-- 	    <div class="button-p row"> -->
+<!-- 	        <div class="col-md-offset-6 col-md-4"> -->
+<!-- 	            <button class="btn-success" th:text="#{button.star}">Star</button> -->
+<!-- 	        </div> -->
+<!-- 	    </div> -->
 	</div>
-	
 	<div class="container" th:replace="fragments/footer :: footer">
-		<p>footer</p>
+			<p>footer</p>
 	</div>
+
 
 </body>
 </html>

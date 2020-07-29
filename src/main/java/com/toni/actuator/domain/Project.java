@@ -41,6 +41,12 @@ public class Project {
         )
     @ManyToMany(cascade = CascadeType.ALL)
 	private List<Category> categories;
+    
+    @Column(name = "message_received")
+    private boolean messageReceived;
+    
+    @Column(name = "message_count")
+    private Integer messageCount;
 	
 	public Integer getId() {
 		return id;
@@ -90,6 +96,20 @@ public class Project {
 	public void setCategories(List<Category> categories) {
 		this.categories = categories;
 	}
-
 	
+    public boolean isMessageReceived() {
+        return messageReceived;
+    }
+
+    public void setMessageReceived(boolean messageReceived) {
+        this.messageReceived = messageReceived;
+    }
+
+    public Integer getMessageCount() {
+        return messageCount;
+    }
+
+    public void setMessageCount(Integer messageCount) {
+        this.messageCount = messageCount;
+    }
 }

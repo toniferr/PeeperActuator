@@ -32,49 +32,49 @@ INSERT INTO category (id,name) VALUES
   FOREIGN KEY (developerId) REFERENCES developer(id)
 );*/
 
-INSERT INTO project (id,name, subtitle, description, license, image_url, developer_id) VALUES
+INSERT INTO project (id,name, subtitle, description, license, image_url, developer_id, message_received, message_count ) VALUES
   (1,'EurosNovos', 'SpringBoot Application', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
 	        								do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
 	        								enim ad minim veniam, quis nostrud exercitation ullamco laboris
 	        								nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
 	        								reprehenderit in voluptate velit esse cillum dolore eu fugiat
 	        								nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-	        							    sunt in culpa qui officia deserunt mollit anim id est laborum.', 'GNU v.3', 'eurosnovos.jpg', 1),
+	        							    sunt in culpa qui officia deserunt mollit anim id est laborum.', 'GNU v.3', 'eurosnovos.jpg', 1, false, 0),
   (2,'Cryptokit', 'Java Swing with JCA and BouncyCastle', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
 	        								do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
 	        								enim ad minim veniam, quis nostrud exercitation ullamco laboris
 	        								nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
 	        								reprehenderit in voluptate velit esse cillum dolore eu fugiat
 	        								nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-	        							    sunt in culpa qui officia deserunt mollit anim id est laborum.', 'GNU v.3', 'cryptokit.jpg', 1),
+	        							    sunt in culpa qui officia deserunt mollit anim id est laborum.', 'GNU v.3', 'cryptokit.jpg', 1, false, 0),
   (3,'Setup-Makeup', 'Spring MVC application (xml conf) and Tiles', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
 	        								do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
 	        								enim ad minim veniam, quis nostrud exercitation ullamco laboris
 	        								nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
 	        								reprehenderit in voluptate velit esse cillum dolore eu fugiat
 	        								nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-	        							    sunt in culpa qui officia deserunt mollit anim id est laborum.', 'GNU v.3', 'setup-makeup.jpg', 1),
+	        							    sunt in culpa qui officia deserunt mollit anim id est laborum.', 'GNU v.3', 'setup-makeup.jpg', 1, false, 0),
   (4,'Setup-Tecnorepo', 'Struts 2 application', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
 	        								do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
 	        								enim ad minim veniam, quis nostrud exercitation ullamco laboris
 	        								nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
 	        								reprehenderit in voluptate velit esse cillum dolore eu fugiat
 	        								nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-	        							    sunt in culpa qui officia deserunt mollit anim id est laborum.', 'GNU v.3', 'setup-tecnorepo.jpg', 1),
+	        							    sunt in culpa qui officia deserunt mollit anim id est laborum.', 'GNU v.3', 'setup-tecnorepo.jpg', 1, false, 0),
   (5,'Peeperjava', 'Maven project with multiple Java versions', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
 	        								do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
 	        								enim ad minim veniam, quis nostrud exercitation ullamco laboris
 	        								nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
 	        								reprehenderit in voluptate velit esse cillum dolore eu fugiat
 	        								nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-	        							    sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Apache', 'peeperjava.jpg', 1),
+	        							    sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Apache', 'peeperjava.jpg', 1, false, 0),
   (6,'Peepermaven', 'Maven projects with multiple elements of Maven', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
 	        								do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
 	        								enim ad minim veniam, quis nostrud exercitation ullamco laboris
 	        								nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
 	        								reprehenderit in voluptate velit esse cillum dolore eu fugiat
 	        								nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-	        							    sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Apache', 'peepermaven.jpg', 1);
+	        							    sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Apache', 'peepermaven.jpg', 1, false, 0);
 
 /*CREATE TABLE project_category (
     projectID INT NOT NULL,
