@@ -31,7 +31,6 @@ public class SpringMvcConfiguration implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry interceptorRegistry){
         interceptorRegistry.addInterceptor(localeChangeInterceptor());
-    } 
-
+    }     
 	
 }
