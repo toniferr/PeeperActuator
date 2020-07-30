@@ -22,6 +22,13 @@
 
 	<dependencies>	
 	
+		<!-- ############# remote-shell ############# -->
+<!-- 		<dependency> -->
+<!-- 		    <groupId>org.springframework.boot</groupId> -->
+<!-- 		    <artifactId>spring-boot-starter-remote-shell</artifactId> -->
+<!-- 		    <version>1.5.22.RELEASE</version> -->
+<!-- 		</dependency>	 -->
+	
 		<!-- ############# jms ############# -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
